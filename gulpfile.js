@@ -38,4 +38,4 @@ gulp.task('watch', function(){
 	gulp.watch(config.paths.html, ['html']);
 });
 
-gulp.task('default', ['html', 'open']);
+gulp.task('default', ['html', 'open', 'watch']);
