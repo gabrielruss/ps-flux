@@ -63,8 +63,8 @@ gulp.task('css', function(){
 
 gulp.task('lint', function(){
 	return gulp.src(config.paths.js)
-		.pipe(eslint({config: 'eslint.config.json'}))
-		.pipe(eslint.format());
+		.pipe(lint({config: 'eslint.config.json'}))
+		.pipe(lint.format());
 });
 
 gulp.task('watch', function(){
