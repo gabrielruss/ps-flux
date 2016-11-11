@@ -8,4 +8,7 @@ gulp-open = opens a url in your browser <br/>
 browserify = bundles your javascript files <br/>
 reactify = transforms JSX into JS <br/>
 vinyl-source-stream = uses conventional text streams with gulp??? <br/>
+gulp-concat = concatenates files <br/>
+bootstrap = css framework <br/>
+eslint = allows for linting for JS files and JSX <br/>
 
