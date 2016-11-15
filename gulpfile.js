@@ -82,4 +82,8 @@ gulp.task('watch', function(){
 	gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
+gulp.task('push', function(){
+	console.log('dude...you mean git');
+});
+
 gulp.task('default', ['html', 'js', 'css', 'images', 'lint', 'open', 'watch']);
