@@ -28,8 +28,16 @@ var ManageAuthorPage = React.createClass({
         };
     },
 
+    componentWillMount: function () {
+        var authorId = this.props.params.id;
+
+        if (authorId) {
+            this.setState({ author: AuthorApi.getAuthorById(authorId) });
+        }
+    },
+
     setAuthorState: function (event) {
-        this.setState({dirty: true});
+        this.setState({ dirty: true });
         var field = event.target.name;
         var value = event.target.value;
         this.state.author[field] = value;
@@ -63,7 +71,7 @@ var ManageAuthorPage = React.createClass({
         }
 
         AuthorApi.saveAuthor(this.state.author);
-        this.setState({dirty: false});
+        this.setState({ dirty: false });
         toastr.success('Author saved.');
         this.transitionTo('authors');
     },
